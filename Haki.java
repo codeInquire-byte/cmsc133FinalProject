@@ -1,3 +1,3 @@
-public class Marines {
+public class Haki extends OnePieceAbilities {
 
 }

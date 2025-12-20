@@ -1,3 +1,3 @@
-public class Pirates {
-
+public class DevilFruits extends OnePieceAbilities {
+    
 }
