@@ -84,8 +84,7 @@ public class JujutsuKaisenAbilities extends AnimeCharacter {
     
 
     public String toString() {
-        return super.getCharacter() + " has " + super.getHp() + " health, " +
-        super.getAttackPower() + " attack power " + ". a cursed energy value of " + 
+        return super.toString() + " They have a cursed energy value of " + 
         this.getCursedEnergy() + ", and uses " + this.getCursedTechnique();
 
     }

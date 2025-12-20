@@ -127,10 +127,8 @@ public class OnePieceAbilities extends AnimeCharacter {
     
 
     public String toString() {
-        return this.getCharacter() + " has " + this.getHp() + " health, " +
-        this.getAttackPower() + " attack power. It is " + this.getHaki() + 
-        " that they have haki and " + this.getDevilFruit() + " that they have a devil fruit. They have a haki power of " + 
-        this.HakiPower + " and a devil fruit power of " + this.DevilFruitPower;
+        return super.toString() + " It is " + this.getHaki() + " that they have haki and " + this.getDevilFruit() + 
+        " that they have a devil fruit. They have a haki power of " + this.HakiPower + " and a devil fruit power of " + this.DevilFruitPower;
     }
 
     public boolean equals(Object o) {
