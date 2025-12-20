@@ -61,6 +61,8 @@ Most of the challenges I faced stemmed from the fact of trying to coherently con
 
 # Debugging 
 
+First, when doing the recusrive method for a combo attack, I kept printing more statementsof a character dying. I fixed that by taking it out of that part and leaving it only in gameOver(). Second, when writing the useCT method in my JJK abilities class, I accidentally had the energy usage the wrong way around, where the more powerful the attack was, the more energy it took. I fixed that by setting it initially to 49 and doing -= 7 every time it iterated through the arrayList
+
 # Proposal 
 
 For my final project, I intend to do a PVP-style program where people can choose
