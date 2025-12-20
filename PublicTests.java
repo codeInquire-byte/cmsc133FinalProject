@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PublicTests {
+
     @Test
     public void testAttackAndGetHP() {
         AnimeCharacter Goku = new AnimeCharacter(100, 100, "Goku") 
@@ -40,7 +41,6 @@ public class PublicTests {
         assertTrue(test != f && test != null);
     }
 
-    pu
 
     @Test
     public void testCompare() {
@@ -113,6 +113,7 @@ public class PublicTests {
         asserEquals("Limitless with Six Eyes", Beerus.getCursedTechnique());
     }
 
+    @Test
     public void testJJKRecoverandUseAbilities() {
         JujtusuKaisenAbilities Beerus = new JujutsuKaisenAbilities(100, 100, "Beerus", 100, "Limitless with Six Eyes");
         JujutsuKaisenAbilities test = new JujutsuKaisenAbilities();
