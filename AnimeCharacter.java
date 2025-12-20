@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
     private int attackPower;
@@ -59,6 +60,7 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
 
     }
 
+
     public void gameOver() {
         this.attackPower = 0;
         this.hp = 0;
@@ -99,6 +101,17 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
             }
         }
 
+    }
+
+    public void saveCharacter(String file) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));
+            writer.write(this.character + " has " + this.hp + " HP and " + this.attackPower + " AP.\n");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
     }
     
     @Override
