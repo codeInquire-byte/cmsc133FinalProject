@@ -33,10 +33,8 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
 
         other.hp -= this.attackPower/10;
 
-        if (other.getHp() < 0) {
-            System.out.println("The opponent's HP has fallen below 0, they are now dead.");
-        } else if (other.getHp() == 0) {
-            System.out.println("The opponent has died.");
+        if (other.getHp() <= 0) {
+            other.gameOver();
         }
     }
 
@@ -44,13 +42,10 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
         if (times == 0 ) {
             return;
         }
-        if (other.getHp() < 0) {
-            System.out.println("The opponent's HP has fallen below 0, they are now dead.");
+        if (other.getHp() <= 0) {
+            other.gameOver();
             return;
-        } else if (other.getHp() == 0) {
-            System.out.println("The opponent has died.");
-            return;
-        }
+        } 
         attack(other);
         comboAttack(other, times - 1);
     }
@@ -62,10 +57,10 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
 
 
     public void gameOver() {
+        System.out.println( this.character + " died.");
         this.attackPower = 0;
         this.hp = 0;
         this.character = null;
-        System.out.println("You died.");
     }
 
     public int getAttackPower() {
