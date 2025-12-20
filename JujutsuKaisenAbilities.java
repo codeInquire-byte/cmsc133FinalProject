@@ -24,20 +24,28 @@ public class JujutsuKaisenAbilities extends AnimeCharacter {
     }
 
     public void useCursedTechnique(AnimeCharacter other) {
-        int potency = 56;
-        // Techniques in ArrayList "techniques" already ordered in level of power
+        int potency = 49;
+        int totalEnergyRequired = 49;
+        // Techniques in ArrayList "techniques" already ordered in level of power from strongeset to weakest
         for (int i = 0; i < techniques.size(); i++) {
             if (techniques.get(i).equals(this.getCursedTechnique())) {
                 break;
             } else {
                 potency -= 7;
+                totalEnergyRequired -= 7;
             }
+        }
+
+        if (this.cursedEnergy < totalEnergyRequired) {
+            System.out.println(this.getCharacter() + " does not have enough cursed energy to use " + this.getCursedTechnique());
+            return;
         }
 
         System.out.println(this.getCharacter() + " just used " + this.getCursedTechnique() + " against " + other.getCharacter() +
             ". It did " + potency + " damage and their health just went from " + other.getHp() + " to " + (other.getHp() - potency));
         
         other.setHp(other.getHp() - potency);
+        this.cursedEnergy -= totalEnergyRequired;
         if (other.getHp() <= 0) {
             other.gameOver();
         }
