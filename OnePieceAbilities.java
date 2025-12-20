@@ -36,7 +36,7 @@ public class OnePieceAbilities extends AnimeCharacter {
                 System.out.println("You've got nothing left in the tank to use your devil fruit.");
             }
             else {
-                int potency = (int) (Math.random() * 15) + 10;
+                int potency = (int) (Math.random() * 16) + 10;
                 System.out.println(this.getCharacter() + " just used their devil fruit against " + other.getCharacter() +
                 ". It did " + potency + " damage and their health just went from " + other.getHp() + " to " + (other.getHp() - potency));
                 DevilFruitPower -= 15;
@@ -50,7 +50,7 @@ public class OnePieceAbilities extends AnimeCharacter {
                 System.out.println("You've got nothing left in the tank to use your haki.");
             }
             else {
-                int potency = (int) (Math.random() * 25) + 15;
+                int potency = (int) (Math.random() * 26) + 15;
                 System.out.println(this.getCharacter() + " just used their haki against " + other.getCharacter() +
                 ". It did " + potency + " damage and their health just went from " + other.getHp() + " to " + (other.getHp() - potency));
                 HakiPower -= 25;
@@ -64,7 +64,7 @@ public class OnePieceAbilities extends AnimeCharacter {
                 System.out.println("You tried to pull off a combo attack and failed. Shouldn't have been greedy and said yes to having both devil fruits and haki!");
             }
             else {
-                int potency = (int) (Math.random() * 15) + 40;
+                int potency = (int) (Math.random() * 16) + 40;
                 System.out.println(this.getCharacter() + " just used their haki and devil fruit against " + other.getCharacter() +
                 ". It did " + potency + " damage and their health just went from " + other.getHp() + " to " + (other.getHp() - potency));
                 DevilFruitPower -= 15;
@@ -128,7 +128,7 @@ public class OnePieceAbilities extends AnimeCharacter {
 
     public String toString() {
         return super.toString() + " It is " + this.getHaki() + " that they have haki and " + this.getDevilFruit() + 
-        " that they have a devil fruit. They have a haki power of " + this.HakiPower + " and a devil fruit power of " + this.DevilFruitPower;
+        " that they have a devil fruit. They have a haki power of " + this.HakiPower + " and a devil fruit power of " + this.DevilFruitPower + ".";
     }
 
     public boolean equals(Object o) {
