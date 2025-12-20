@@ -63,6 +63,7 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
         this.attackPower = 0;
         this.hp = 0;
         this.character = null;
+        System.out.println("You died.");
     }
 
     public int getAttackPower() {
@@ -89,6 +90,17 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
         this.character = character;
     }
 
+    public void randomizeCharacter() {
+        int random = (int)(Math.random() * characters.size());
+        for (int i = 0; i < characters.size(); i++) {
+            if (i == random) {
+                this.character = characters.get(i);
+                break;
+            }
+        }
+
+    }
+    
     @Override
     public int compareTo(AnimeCharacter other) {
         if (this.attackPower == other.attackPower) {
