@@ -5,7 +5,7 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
     private int attackPower;
     private int hp;
     private String character;
-    private ArrayList<String> characters = new ArrayList<String>(Arrays.asList("Beerus", "Goku", "Ichigo", "Naruto", "Sasuke"));
+    private static final ArrayList<String> characters = new ArrayList<String>(Arrays.asList("Beerus", "Goku", "Ichigo", "Naruto", "Sasuke"));
     ;
 
     public AnimeCharacter() {
