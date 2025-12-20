@@ -5,13 +5,13 @@ public class AnimeCharacter implements Fighter, Comparable<AnimeCharacter> {
     private int attackPower;
     private int hp;
     private String character;
-    private static final ArrayList<String> characters = new ArrayList<String>(Arrays.asList("Beerus", "Goku", "Ichigo", "Naruto", "Sasuke"));
-    ;
-
-    public AnimeCharacter() {
-        attackPower = (int)(Math.random() * 100) + 1;
-        hp = (int)(Math.random() * 51) + 50;
-        character = this.characters.get((int)(Math.random() * 5));
+    private final ArrayList<String> characters = new ArrayList<String>(Arrays.asList("Beerus", "Goku", "Ichigo", "Naruto", "Sasuke"));
+        ;
+    
+        public AnimeCharacter() {
+            attackPower = (int)(Math.random() * 100) + 1;
+            hp = (int)(Math.random() * 51) + 50;
+            character = this.characters.get((int)(Math.random() * 5));
     }
 
     public AnimeCharacter(int attackPower, int hp, String character) {

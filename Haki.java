@@ -86,6 +86,18 @@ public class Haki extends OnePieceAbilities {
         
     }
 
+    public boolean getArmamentHaki() {
+        return armamentHaki;
+    }
+
+    public boolean getObservationHaki() {
+        return observationHaki;
+    }
+
+    public boolean getConquerorsHaki() {
+        return conquerorsHaki;
+    }
+
     public String toString() {
         return super.toString() + " It is " + this.armamentHaki + " that they have armament haki, " +
         this.observationHaki + " that they have observation haki, and " + this.conquerorsHaki + " that they have conqueror's haki.";
