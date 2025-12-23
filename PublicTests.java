@@ -5,7 +5,7 @@ public class PublicTests {
 
     @Test
     public void testAttackAndGetHP() {
-        AnimeCharacter Goku = new AnimeCharacter(100, 100, "Goku") 
+        AnimeCharacter Goku = new AnimeCharacter(100, 100, "Goku"); 
         AnimeCharacter Ichigo = new AnimeCharacter(80, 50, "Ichigo"); 
         
         Goku.comboAttack(Ichigo, 4);
@@ -34,11 +34,11 @@ public class PublicTests {
 
     @Test
     public void testRandomizeCharacter() {
-        AnimeCharacter test = new AnimeCharacter()
+        AnimeCharacter test = new AnimeCharacter();
         String f = test.getCharacter();
         test.randomizeCharacter();
 
-        assertTrue(test != f && test != null);
+        assertTrue(test.getCharacter() != f && test != null);
     }
 
 
@@ -53,7 +53,7 @@ public class PublicTests {
     @Test
     public void testEqualsOne() {
         AnimeCharacter Tester1 = new AnimeCharacter();
-        AnimeCharacter Tester2 = newAnimeCharacter();
+        AnimeCharacter Tester2 = new AnimeCharacter();
 
         assertEquals(Tester1, Tester2);
     }
@@ -84,7 +84,7 @@ public class PublicTests {
         Haki tester2 = new Haki(false, true, 0, 100, true, true, true);
 
         assertTrue(tester1.getHaki());
-        assertTrue(tester1.getArmamentHaki())
+        assertTrue(tester1.getArmamentHaki());
         assertTrue(tester1.getObservationHaki());
         assertFalse(tester1.getConquerorsHaki());
 
