@@ -105,12 +105,12 @@ public class PublicTests {
 
     @Test
     public void testJJKConstructorandGetters() {
-        JujtusuKaisenAbilities Beerus = new JujutsuKaisenAbilities(100, 100, "Beerus", 100, "Limitless with Six Eyes");
+        JujutsuKaisenAbilities Beerus = new JujutsuKaisenAbilities(100, 100, "Beerus", 100, "Limitless with Six Eyes");
         assetEquals(100, Beerus.getAttackPower());
         assetEquals(100, Beerus.getHp());
         assertEquals("Beerus", Beerus.getCharacter());
         assertEquals(100, Beerus.getCursedEnergy());
-        asserEquals("Limitless with Six Eyes", Beerus.getCursedTechnique());
+        assertEquals("Limitless with Six Eyes", Beerus.getCursedTechnique());
     }
 
     @Test
