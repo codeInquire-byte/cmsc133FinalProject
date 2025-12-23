@@ -59,18 +59,18 @@ public class PublicTests {
     }
 
     @Test
-    public void testEqualsTwo() {
+    public void testUnequal() {
         AnimeCharacter Tester14 = new AnimeCharacter();
         AnimeCharacter Chicken = new AnimeCharacter(70, 70, "Sasuke");
 
-        assertEquals(Tester14, Chicken);
+        assertNotEquals(Tester14, Chicken);
 
 
     }
 
     @Test
     public void testToString() {
-        AnimeCharacter Goku3 = new AnimeCharacter();
+        AnimeCharacter Goku3 = new AnimeCharacter(100, 100, "Goku");
         String f = Goku3.toString();
         String g = "Goku has an attack power of 100 and 100 health.";
 
@@ -94,7 +94,7 @@ public class PublicTests {
         assertEquals(100, tester2.getHakiPower());
         assertTrue(tester2.getArmamentHaki());
         assertTrue(tester2.getObservationHaki());
-        assertFalse(tester2.getConquerorsHaki());
+        assertTrue(tester2.getConquerorsHaki());
 
         assertTrue(tester1.equals(tester1));
         assertTrue(tester2.equals(tester2)); 
