@@ -63,7 +63,7 @@ public class PublicTests {
         AnimeCharacter Tester14 = new AnimeCharacter();
         AnimeCharacter Chicken = new AnimeCharacter(70, 70, "Sasuke");
 
-        assetEquals(Tester14, Chicken);
+        assertEquals(Tester14, Chicken);
 
 
     }
@@ -106,8 +106,8 @@ public class PublicTests {
     @Test
     public void testJJKConstructorandGetters() {
         JujutsuKaisenAbilities Beerus = new JujutsuKaisenAbilities(100, 100, "Beerus", 100, "Limitless with Six Eyes");
-        assetEquals(100, Beerus.getAttackPower());
-        assetEquals(100, Beerus.getHp());
+        assertEquals(100, Beerus.getAttackPower());
+        assertEquals(100, Beerus.getHp());
         assertEquals("Beerus", Beerus.getCharacter());
         assertEquals(100, Beerus.getCursedEnergy());
         assertEquals("Limitless with Six Eyes", Beerus.getCursedTechnique());
@@ -115,7 +115,7 @@ public class PublicTests {
 
     @Test
     public void testJJKRecoverandUseAbilities() {
-        JujtusuKaisenAbilities Beerus = new JujutsuKaisenAbilities(100, 100, "Beerus", 100, "Limitless with Six Eyes");
+        JujutsuKaisenAbilities Beerus = new JujutsuKaisenAbilities(100, 100, "Beerus", 100, "Limitless with Six Eyes");
         JujutsuKaisenAbilities test = new JujutsuKaisenAbilities();
         Beerus.useCursedTechnique(test);
 
