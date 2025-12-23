@@ -38,7 +38,7 @@ public class PublicTests {
         String f = test.getCharacter();
         test.randomizeCharacter();
 
-        assertTrue(test.getCharacter() != f && test != null);
+        assertTrue(!test.getCharacter().equals(f) && test != null);
     }
 
 
